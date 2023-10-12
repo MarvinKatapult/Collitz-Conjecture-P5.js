@@ -6,12 +6,11 @@ function setup() {
     frameRate(10);
 }
 
-
 function draw() 
 {
-    
     background(25);
     startnum++;
+
     let num = startnum;
     let angle = PI/2.5;
 
@@ -22,7 +21,6 @@ function draw()
     
     while(num != 1) {
         let tmp = map(num, 1, startnum, 1, 8);
-
 
         if (isEven(num)) {
             rotate(angle)
@@ -38,9 +36,7 @@ function draw()
     }
 }
 
-
 function collitzalgorithm(num) {
-
     //even
     if (isEven(num)) {
         return num / 2;
@@ -49,7 +45,6 @@ function collitzalgorithm(num) {
         return 3 * num + 1;
     }
 }
-
 
 function isEven(num) {
     return num % 2 === 0;
